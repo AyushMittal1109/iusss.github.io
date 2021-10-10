@@ -30,3 +30,12 @@ function fun1(a)
 //         setTimeout(typeWriter,speed);
 //     }
 // }
+
+setInterval(updateTime,1000);
+
+function updateTime()
+{
+    let rn = new Date();
+    let t = rn.getHours() + ":" + rn.getMinutes() + ":" + rn.getSeconds() + "<br>" + rn.getDate() + "/" + (rn.getMonth()+1)+"/"+rn.getFullYear();
+    document.getElementById("time").innerHTML=t;
+}
